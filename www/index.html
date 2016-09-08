@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Обмен сообщениями</title>
+	<link href="css/style.css" rel="stylesheet" />
+	<script src="js/jquery-1.11.2.min.js"></script>
+	<script src="js/switch_input_registration.js"></script>
+</head>
+<body>
+	<div id="wrapper">
+		
+		<div id="container_forms">
+
+			<form action="" method="post">
+				
+				<div class="conatiner_switch">
+					<div id="switch_input">Вход</div>
+					<div id="switch_registration">Регистрация</div>					
+				</div>
+
+				<div id="container_input">
+					<label for="user_name_input">Имя пользователя или адрес электронной почты:</label><br />
+					<input type="text" name="user_name_input" id="user_name_input" /><br /><br />
+
+					<label for="password_input">Пароль:</label><br />
+					<input type="password" name="password_input" id="password_input" /><br /><br />
+
+					<input type="submit" name="input" value="Вход" />
+				</div>
+				
+
+				<div id="container_registration">
+					<label for="user_name_registration">Имя пользователя:</label><br />
+					<input type="text" name="user_name_registration" id="user_name_registration" /><br /><br />
+
+					<label for="second_name_registration">Фамилия:</label><br />
+					<input type="text" name="second_name_registration" id="second_name_registration" /><br /><br />
+
+					<label for="patronymic_registration">Отчество:</label><br />
+					<input type="text" name="patronymic_registration" id="patronymic_registration" /><br /><br />
+
+					<label for="password_registration">Пароль:</label><br />
+					<input type="password" name="password_registration" id="password_registration" /><br /><br />
+
+					<label for="repeat_password_registration">Подтвердите пароль:</label><br />
+					<input type="password" name="repeat_password_registration" id="repeat_password_registration" /><br /><br />
+
+					<label for="e_mail">Электронная почта:</label><br />
+					<input type="text" name="e_mail" id="e_mail" /><br /><br />
+
+					<input type="submit" name="registration" value="Регистрация" />
+				</div>
+
+			</form>
+
+		</div>
+
+	</div>
+</body>	
+</html>
