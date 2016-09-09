@@ -7,6 +7,12 @@ body {
 }
 
 
+.name_page {
+	margin: -5px 0 7px 0;
+	text-align: center;
+	font-size: 1.1em;
+}
+
 
 #wrapper {
 	/*outline: 1px solid red;*/
@@ -98,11 +104,11 @@ body {
 	border-radius: 10px;
 	position: absolute; 
 	width: 250px;  
-	height: 535px; 
+	height: 565px; 
 	left: 50%;  
 	top: 50%;  
 	margin-left: -160px;  
-	margin-top: -290px;  
+	margin-top: -305px;  
 	padding: 20px 54px;
 }
 
@@ -113,7 +119,7 @@ body {
 	border-radius: 5px;
 	font-size: 0.9em;
 	padding: 5px;
-	width: 240px;
+	width: 245px;
 }
 
 .conatiner_switch {
@@ -130,7 +136,7 @@ body {
 	width: 178px;
 	padding: 10px 0;
 	text-align: center;
-	background: #1E90FF;
+	background: #274473;
 	color: #FFF;
 	font-weight: bold;
 }
