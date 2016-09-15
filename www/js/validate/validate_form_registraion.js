@@ -29,6 +29,12 @@ function validateName(field) {
 		$("#user_name_registration").css("background", "pink");
 		return "Не введено имя. <br />";
 	}
+	else 
+	if (/\w+/.test(field)) {
+		$("#user_name_registration").css("border", "1px solid red");
+		$("#user_name_registration").css("background", "pink");
+		return "В имени могут быть только буквы. <br />";
+	}
 	else {
 		$("#user_name_registration").css("border", "1px solid green");
 		$("#user_name_registration").css("background", "#CDFC7E");
@@ -44,6 +50,12 @@ function validateSecondName(field) {
 		$("#second_name_registration").css("border", "1px solid red");
 		$("#second_name_registration").css("background", "pink");
 		return "Не введена фамилия. <br />";
+	}
+	else 
+	if (/\w+/.test(field)) {
+		$("#second_name_registration").css("border", "1px solid red");
+		$("#second_name_registration").css("background", "pink");
+		return "В фамилии могут быть только буквы. <br />";
 	}
 	else {
 		$("#second_name_registration").css("border", "1px solid green");
