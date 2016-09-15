@@ -118,9 +118,26 @@ body {
 	border: 1px solid #362c12;
 	border-radius: 5px;
 	font-size: 0.9em;
-	padding: 5px;
+	padding: 3px;
 	width: 245px;
 }
+
+#container_forms input[type=submit] {
+	padding: 7px 10px;
+	background: #1E90FF;
+	color: #FFF;
+	text-decoration: none;
+	border: 1px solid #CCC;
+	border-radius: 5px;
+	color: #FFF;
+	cursor: pointer;
+}
+
+#container_forms input[type=submit]:hover {
+	background: #1F75FE;
+	color: #FFF;
+}
+
 
 .conatiner_switch {
 	/*outline: 1px solid red;*/
@@ -155,7 +172,6 @@ body {
 
 #switch_input, #switch_registration:hover {
 	cursor: pointer;
-	/*background: red;*/
 }
 
 
@@ -239,27 +255,17 @@ body {
 	outline: 1px dashed red;
 }
 
-.qwe {
-	outline: 1px dashed green;
-	margin-right: 201px;
 
-}
-
-
-.conteiner_btn a {
-	display: block;
-	width: 180px;
-	height: 20px;
-	padding: 7px 10px;
-	background: #1E90FF;
-	color: #FFF;
-	text-decoration: none;
-	border: 1px solid #CCC;
-	border-radius: 5px;
-	color: #FFF;
-}
-
-.conteiner_btn a:hover {
-	background: #FC4E3A;
-	color: #FFF;
+#message_about_errors_input, 
+#message_about_errors_registration {
+	display: none;
+	position: absolute;
+	top: -30000px;
+	right: 0;
+	width: 400px;
+	padding: 10px;
+	border-left: 2px solid red;
+	border-bottom: 2px solid red;
+	border-bottom-left-radius: 10px; 
+	background: pink;
 }
