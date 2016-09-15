@@ -30,7 +30,7 @@ function validateName(field) {
 		return "Не введено имя. <br />";
 	}
 	else 
-	if (/\w+/.test(field)) {
+	if (/\d+/.test(field)) {
 		$("#user_name_registration").css("border", "1px solid red");
 		$("#user_name_registration").css("background", "pink");
 		return "В имени могут быть только буквы. <br />";
@@ -52,7 +52,7 @@ function validateSecondName(field) {
 		return "Не введена фамилия. <br />";
 	}
 	else 
-	if (/\w+/.test(field)) {
+	if (/\d+/.test(field)) {
 		$("#second_name_registration").css("border", "1px solid red");
 		$("#second_name_registration").css("background", "pink");
 		return "В фамилии могут быть только буквы. <br />";
