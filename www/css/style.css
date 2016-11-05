@@ -269,3 +269,11 @@ body {
 	border-bottom-left-radius: 10px; 
 	background: pink;
 }
+
+.none {
+	display: none;
+}
+
+.block {
+	display: block;
+}
