@@ -1,0 +1,24 @@
+body {
+
+}
+
+.interlocutor_block {
+	outline: 1px solid red;
+	height: 150px;
+	width: 800px;
+	margin-bottom: 20px;
+}
+
+.container_logo {
+	outline: 1px solid purple;
+	float: left;
+	width:  200px;
+	height: 150px;
+}
+
+.container_btn {
+	outline: 1px solid green;
+	float: right;
+	width:  200px;
+	height: 150px;
+}
