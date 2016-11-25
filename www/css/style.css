@@ -4,6 +4,7 @@ body {
 	font-family: Geneva, Arial, Helvetica, sans-serif;
 	font-size: 1.1em;
 	color: #362c12;
+	min-width: 800px;
 }
 
 
@@ -40,6 +41,7 @@ body {
 
 #main {
 	/*outline: 1px solid green;*/
+	position: relative;
 	margin: 0 0 0 335px;
 	padding: 20px 20px 50px 20px;
 	text-align: justify;
@@ -122,7 +124,7 @@ body {
 	width: 245px;
 }
 
-#container_forms input[type=submit] {
+#container_forms input[type=submit], input[type=submit]  {
 	padding: 7px 10px;
 	background: #1E90FF;
 	color: #FFF;
@@ -133,7 +135,7 @@ body {
 	cursor: pointer;
 }
 
-#container_forms input[type=submit]:hover {
+#container_forms input[type=submit]:hover, input[type=submit]:hover {
 	background: #1F75FE;
 	color: #FFF;
 }
@@ -196,6 +198,100 @@ body {
 	color: #FFF;
 }
 
+.btn_change_personal_data {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	display: block;
+	width: 190px;
+	height: 18px;
+	padding: 7px 10px;
+	background: #1E90FF;
+	color: #FFF;
+	text-decoration: none;
+	border: 1px solid #CCC;
+	border-radius: 5px;
+	color: #FFF;
+	font-size: 0.9em;
+}
+
+.btn_change_personal_data:hover {
+	background: #FC4E3A;
+	color: #FFF;
+}
+
+
+button, .btn, .btn_save, .btn_change, .btn_remove {
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08);
+	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08);
+	color: #fff;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	padding: 8px 16px;
+	margin: 20px auto;
+	text-decoration: none;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+	-webkit-transition: background-color 0.1s linear;
+	-moz-transition: background-color 0.1s linear;
+	-o-transition: background-color 0.1s linear;
+	transition: background-color 0.1s linear;        
+}
+
+button, .btn {
+	background-color: rgb(43, 92, 201);
+	border: 1px solid rgb(33, 126, 74);
+}
+
+.btn_save {
+	background-color: #03C03C;
+	border: 1px solid rgb(33, 126, 74);
+}
+
+.btn_change {	
+	background-color: #EF7915 !important;
+	border: 1px solid rgb(33, 126, 74);
+}
+
+.btn_remove {	
+	background-color: #FF5349;
+	border: 1px solid rgb(33, 126, 74);
+}
+
+      
+.btn:hover, button:hover {
+	background-color: rgb(78, 129, 201);
+	cursor: pointer;
+	color: #fff;
+}
+
+
+.btn_save:hover {	
+	background-color: #0BDA51;
+	border: 1px solid rgb(33, 126, 74);
+	text-decoration: none;
+	color: #FFF;
+	cursor: pointer;
+}
+
+.btn_change:hover {	
+	background-color: #FFA420 !important;
+	border: 1px solid rgb(33, 126, 74);
+	text-decoration: none;
+	color: #FFF;
+	cursor: pointer;
+}
+
+.btn_remove:hover {
+	background-color: #FD7C6E;
+	border: 1px solid rgb(33, 126, 74);
+	text-decoration: none;
+	color: #FFF;
+	cursor: pointer;
+}
+
 .conatiner_user {
 	/*outline: 1px solid red;*/
 	border-bottom: 1px solid #CCC;
@@ -241,20 +337,54 @@ body {
 }
 
 .conteiner_user{
-	outline: 1px solid red;
+	/*outline: 1px solid red;*/
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	height: 100px;
+	margin-bottom: 20px;
 }
 
 .conteiner_user img {
 	float: left;
+	margin-right: 10px;
 }
+
+/*.conteiner_btn {
+	float: right;
+	width: 250px;
+	outline: 1px dashed red;
+}*/
 
 .conteiner_btn {
+	/*outline: 1px solid yellow;*/
 	float: right;
-	width: 200px;
-	outline: 1px dashed red;
+	margin: 10px 30px 0 0;
+	width: 215px;
+	
 }
 
+.conteiner_btn a {
+	display: block;
+	width: 205px;
+	/*height: 35px;*/
+	padding: 7px 5px;
+	background: #1E90FF;
+	color: #FFF;
+	text-decoration: none;
+	border: 1px solid #CCC;
+	border-radius: 5px;
+	color: #FFF;
+	font-size: 0.8em;
+	margin-bottom: 5px;
+}
+
+.conteiner_btn a:hover {
+	background: #FC4E3A;
+	color: #FFF;
+	cursor: pointer;
+}
 
 #message_about_errors_input, 
 #message_about_errors_registration {
@@ -270,10 +400,35 @@ body {
 	background: pink;
 }
 
-.none {
-	display: none;
+.bold {
+	font-weight: bold;
 }
 
-.block {
-	display: block;
+.textarea_text {
+	width: 80%;
+	height: 120px;
+}
+
+.clear{
+	clear: both;
+}
+
+
+.block_mesaage {
+	width: 45%;
+	margin-bottom: 10px;
+	min-height: 70px;
+	border-radius: 5px;
+}
+
+.my_message {
+	float: left;
+	border: 1px solid red;
+	background-color: pink;
+}
+
+.interlocutor_message {
+	float: right;
+	border: 1px solid blue;
+	background-color: #3C8DB8;
 }

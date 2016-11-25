@@ -89,35 +89,12 @@ function handleServerResponse() {
 
 		// значение 200 говорит о том, что транзакция прошла успешно
 		if (xmlHttp.status == 200) {
-			/*
-			// получить ответ в формате XML (предполагается корректный формат XML)
-			responseXml = xmlHttp.responseXML;
-
-			// получить ссылку на корневой элемент
-			xmlDoc = responseXml.documentElement;
-
-			result = xmlDoc.getElementsByTagName("result")[0].firstChild.data;
-			fieldID = xmlDoc.getElementsByTagName("fieldid")[0].firstChild.data;
-
-			// отыскать элемент HTML, в котором следует вывести сообщение об ошибке
-			message = document.getElementById(fieldID);
-
-			// показать или спрятать сообщение
-			message.className = (result == "0") ? "block" : "none";
-
-			// вызвать validate() еще раз, на случай, если кэш не пуст
-			setTimeout("validate();", 500);
-			*/
-
 
 			// получить ответ в формате XML (предполагается корректный формат XML)
 			responseXml = xmlHttp.responseXML;
 
 			// получить ссылку на корневой элемент
 			xmlDoc = responseXml.documentElement;
-
-			//result = xmlDoc.getElementsByTagName("result")[0].firstChild.data;
-			//fieldID = xmlDoc.getElementsByTagName("fieldid")[0].firstChild.data;
 
 			// Проходим по полученному документу XML
 			for (var i = 0; i < xmlDoc.getElementsByTagName("result").length+1; i++) {
@@ -130,6 +107,7 @@ function handleServerResponse() {
 
 				// показать или спрятать сообщение
 				message.className = (result == "0") ? "block" : "none";
+
 			}
 
 			// вызвать validate() еще раз, на случай, если кэш не пуст

@@ -1,4 +1,4 @@
-function validate_registration() {
+﻿function validate_registration() {
 
 	var error = "";
 

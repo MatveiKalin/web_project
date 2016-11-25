@@ -1,4 +1,4 @@
-function validate_input() {
+﻿function validate_input() {
 
 	var error = "";
 

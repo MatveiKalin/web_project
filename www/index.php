@@ -1,13 +1,28 @@
+<?php
+
+	// Запускаем сессию
+	session_start();
+
+	// Подключение файла, который содержит подключаемые модули
+	require_once('configuration_files/include_modules.php');
+
+	if ($_SESSION['user_id']) {
+		teleportation('pages/my_page.php');
+	}
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<title>Обмен сообщениями</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="css/style.css" rel="stylesheet" />
 	<script src="js/jquery-1.11.2.min.js"></script>
 	<script src="js/switch_input_registration.js"></script>
-	<!--<script src="js/validate/validate_form_registraion.js"></script>
-	<script src="js/validate/validate_form_input.js"></script>-->
+	<script src="js/validate/validate_form_registraion.js"></script>
+	<script src="js/validate/validate_form_input.js"></script>
+
 
 	<script src="js/validate/validate_registration_AJAX.js"></script>
 
@@ -38,17 +53,17 @@
 
 </head>
 <body>
+
 	<div id="wrapper">
 		
 		<div id="container_forms">
 
-			
 			<div class="conatiner_switch">
 				<div id="switch_input">Вход</div>
 				<div id="switch_registration">Регистрация</div>					
 			</div>
 
-			<form action="" method="post" id="container_input">
+			<form action="controllers/login.php" method="post" id="container_input">
 
 				<h4 class="name_page">Вход</h4>
 
@@ -62,9 +77,9 @@
 			</form>
 			
 
-			<form action="" method="post" id="container_registration">
+			<form action="controllers/registration.php" method="post" id="container_registration">
 
-			<h4 class="name_page">Регистрация</h4>
+				<h4 class="name_page">Регистрация</h4>
 
 				<label for="user_name_registration">Имя пользователя:</label><br />
 				<input type="text" name="user_name_registration" id="user_name_registration" onblur="process(this.value, this.id)" /><br /><br />
