@@ -23,7 +23,6 @@
 	<script src="js/validate/validate_form_registraion.js"></script>
 	<script src="js/validate/validate_form_input.js"></script>
 
-
 	<script src="js/validate/validate_registration_AJAX.js"></script>
 
 
