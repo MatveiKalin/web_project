@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<response><resp><result>1</result><fieldid>e_mail_error_exist</fieldid></resp><resp><result>1</result><fieldid>e_mail_error_syntax</fieldid></resp><resp><result>1</result><fieldid>e_mail_error_empty</fieldid></resp></response>
+<response><resp><result>0</result><fieldid>e_mail_error_exist</fieldid></resp><resp><result>1</result><fieldid>e_mail_error_syntax</fieldid></resp><resp><result>1</result><fieldid>e_mail_error_empty</fieldid></resp></response>

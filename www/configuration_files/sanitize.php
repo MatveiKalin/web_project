@@ -14,13 +14,13 @@ function sanitizeString($var) {
 
 	if (get_magic_quotes_gpc()) {
 		
-		// Избавляемся от нежелательных слэш-символов
-		//$var = stripslashes($var);
+		// Избавляемся от нежелательных слэш-символов, кторые экранируют символы
+		$var = stripslashes($var);
 	
 	}
 	
 	// Избавляемся от любого HTML-кода, например тег <b>, заменяется &lt; b &gt
-	//$var = htmlentities($var);
+	$var = htmlentities($var);
 	
 	// Избавляемся полность от введенного HTML
 	$var = strip_tags($var);

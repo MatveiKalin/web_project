@@ -4,6 +4,7 @@
 
 	// Подключение файла, который содержит подключаемые модули
 	require_once('../configuration_files/connectvars.php');
+	require_once('../configuration_files/sanitize.php');
 
 	$dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME)
 		or die('Невозможно связаться с базой данных!');
@@ -357,32 +358,32 @@
 		switch ($_POST['fieldID']) {
 			// проверить правильность имени пользователя
 			case 'user_name_registration':
-				validateName($xml, $_POST['inputValue'], $sorts);
+				validateName($xml, sanitizeMySQL($_POST['inputValue']), $sorts);
 				break;
 
 			// проверить правильность фамилии
 			case 'second_name_registration':
-				validateSecondName($xml, $_POST['inputValue'], $sorts);
+				validateSecondName($xml, sanitizeMySQL($_POST['inputValue']), $sorts);
 				break;
 
 			// проверить правильность логина
 			case 'login_registration':
-				validateLogin($xml, $_POST['inputValue'], $sorts, $dbc);
+				validateLogin($xml, sanitizeMySQL($_POST['inputValue']), $sorts, $dbc);
 				break;
 
 			// проверить правильность пароля
 			case 'password_registration':
-				validatePassword($xml, $_POST['inputValue'], $sorts);
+				validatePassword($xml, sanitizeMySQL($_POST['inputValue']), $sorts);
 				break;
 
 			// проверить правильность подтверждающего пароля 
 			case 'repeat_password_registration':
-				validatePassword2($xml, $_POST['inputValue'], $sorts);
+				validatePassword2($xml, sanitizeMySQL($_POST['inputValue']), $sorts);
 				break;
 
 			// проверить, правильно ли указана электронная почта
 			case 'e_mail':
-				validateEmail($xml, $_POST['inputValue'], $sorts, $dbc);
+				validateEmail($xml, sanitizeMySQL($_POST['inputValue']), $sorts, $dbc);
 				break;
 		}
 
