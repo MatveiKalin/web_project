@@ -16,7 +16,7 @@
 				
 				<div id="header">
 					<h2>Обмен сообщениями</h2>
-					<a href="../controllers/logout.php" id="out">Выход из учетной записи</a>
+					<a href="../controllers/logoutController.php" id="out">Выход из учетной записи</a>
 				</div>
 			
 <?php

@@ -7,7 +7,7 @@
 	require_once('configuration_files/include_modules.php');
 
 	if ($_SESSION['user_id']) {
-		teleportation('pages/my_page.php');
+		teleportation('view/my_page.php');
 	}
 
 ?>
@@ -22,6 +22,7 @@
 	<script src="js/switch_input_registration.js"></script>
 	<script src="js/validate/validate_form_registraion.js"></script>
 	<script src="js/validate/validate_form_input.js"></script>
+
 
 	<script src="js/validate/validate_registration_AJAX.js"></script>
 
@@ -62,7 +63,7 @@
 				<div id="switch_registration">Регистрация</div>					
 			</div>
 
-			<form action="controllers/login.php" method="post" id="container_input">
+			<form action="controllers/loginController.php" method="post" id="container_input">
 
 				<h4 class="name_page">Вход</h4>
 
@@ -76,7 +77,7 @@
 			</form>
 			
 
-			<form action="controllers/registration.php" method="post" id="container_registration">
+			<form action="controllers/registrationController.php" method="post" id="container_registration">
 
 				<h4 class="name_page">Регистрация</h4>
 

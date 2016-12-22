@@ -26,7 +26,7 @@
 			
 
 		// Вызываем функцию, которая переадресует на страницу, имя которой написано в параметре
-		teleportation('../pages/write_personal_message.php?interlocutor=' . $id_interlocutor);
+		teleportation('../view/write_personal_message.php?interlocutor=' . $id_interlocutor);
 	}
 
 ?>

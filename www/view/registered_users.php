@@ -43,7 +43,7 @@
 						}
 
 						echo '<div class="conteiner_btn">';
-							echo '<a href="../controllers/add_interlocutor.php?interlocutor=' . $row['id'] . '">Добавить в собеседники</a>';
+							echo '<a href="../controllers/addInterlocutorControllers.php?interlocutor=' . $row['id'] . '">Добавить в собеседники</a>';
 							echo '<a href="users_page.php?id_user=' . $row['id'] . '">Просмотреть личные данные</a>';
 						echo '</div>';
 
