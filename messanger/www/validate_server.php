@@ -1,30 +1,39 @@
 <?php
+	
 
- 	$login = $_POST['login'];
- 	$pass = $_POST['pass'];
- 	$email = $_POST['email'];
+	if (isset($_GET['login'])) {
+		$login = $_GET['login'];
 
- 	if ($login == "") {
- 		echo "Не введен логин" . "<br />";
- 	}
+		if ($login == "") {
+	 		echo "Не введен логин";
+	 	}
+	}
 
- 	if ($pass == ""){
- 		echo "Не введен пароль" . "<br />";
- 	}
 
- 	if ($email == ""){
- 		echo "Не введен емэйл" . "<br />";
- 	}
+	if (isset($_GET['password'])) {
+		$password = $_GET['password'];
 
- 	/*if ( !((email.indexOf(".") > 0) && (email.indexOf("@") > 0)) || (/[^a-zA-Z0-9.@_-]/.test(email)) ) {
-		$("#errorEmail").css("display", "inline");
-		return "емэйл имеет неверный формат";
-	}*/
+		if ($password == "") {
+	 		echo "Не введен пароль";
+	 	}
+	}
 
-	//echo strpos("123", "0");
 
-	if ( !( strpos($email, ".") > 0  && strpos($email, "@") > 0 ) ||  preg_match("/[^a-zA-Z0-9.@_-]/", $email) ) {
-		echo "Емэйл введен неверно" . "<br />";
+	if (isset($_GET['email'])) {
+		$email = $_GET['email'];
+
+		if ($email == "") {
+	 		echo "Не введен емэйл";
+	 	}
+	}
+
+
+	if (isset($_GET['errorValidate'])) {
+		$email = $_GET['errorValidate'];
+
+	 	if ( !( strpos($email, ".") > 0  && strpos($email, "@") > 0 ) ||  preg_match("/[^a-zA-Z0-9.@_-]/", $email) ) {
+			echo "Емэйл введен неверно";
+		}
 	}
 
 ?>
