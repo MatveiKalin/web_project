@@ -1,1 +1,0 @@
-document.getElementById("registration").onsubmit = validate;

@@ -10,6 +10,6 @@
 	define('DB_PASSWORD', '12345678');
 	
 	//Объявление константы, которая содержит название базы даннх
-	define('DB_NAME', 'chat_andrey');
+	define('DB_NAME', 'messanger_base');
 
 ?>
