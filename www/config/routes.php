@@ -10,6 +10,30 @@ return array(
     // Контроллер "UserController", метод "actionChangePersonalData"
     'user/changePersonalData' => 'user/changePersonalData', 
     
+    // Пользователь переходит на страницу с диалогом
+    // Контроллер "UserController", метод "actionWriteMessageInDialog"
+    'user/writeMessageInDialog/([0-9]+)' => 'user/writeMessageInDialog/$1',
+    
+    // Пользователь отправляет сообщение другому пользователю
+    // Контроллер "UserController", метод "actionSendMessageInDialog"
+    'user/sendMessageInDialog/([0-9]+)' => 'user/sendMessageInDialog/$1',
+    
+    // Пользователь переходит в общий чат
+    // Контроллер "UserController", метод "actionWriteCommonMessage"
+    'user/writeCommonMessage/([0-9]+)' => 'user/writeCommonMessage/$1',
+    
+    // Пользователь отправляет сообщение другому пользователю
+    // Контроллер "UserController", метод "actionSendMessageCommon"
+    'user/sendMessageCommon/([0-9]+)' => 'user/sendMessageCommon/$1',
+    
+    // Пользователь переходит на страницу, где можно отправить сообщение на электронную почту
+    // Контроллер "UserController", метод "actionWriteMessageToMail"
+    'user/writeMessageToMail/([0-9]+)' => 'user/writeMessageToMail/$1',
+    
+    // Пользователь отправляет сообщение другому пользователю
+    // Контроллер "UserController", метод "actionSendMessageToMail"
+    'user/sendMessageToMail' => 'user/sendMessageToMail',
+    
     // Пользователь выходит из учетной записи
     // Констроллер "UserController", метод "actionLogout"
     'user/logout' => 'user/logout', 
@@ -19,10 +43,6 @@ return array(
     // Пользователь просматривает список зарегистрированных пользователей
     // Контроллер "RegisterUsersController", метод "actionList"
     'registerUsers/([0-9]+)' => 'registerUsers/list/$1', 
-    
-    // Пользователь добавляет пользователя к себе в собеседники
-    // Контроллер "RegisterUsersController", метод "actionAddInterlocutor"
-    //'registerUsers/addInterlocutor/([0-9]+)' => 'registerUsers/addInterlocutor/$1', 
     
     // Пользователь добавляет пользователя к себе в собеседники
     // Контроллер "RegisterUsersController", метод "actionAddInterlocutorAjax"
@@ -37,10 +57,7 @@ return array(
     // Пользователь просматривает список своих собеседников
     // Контроллер "InterlocutorController", метод "actionList"
     'interlocutor/([0-9]+)' => 'interlocutor/list/$1', 
-    
-    // Пользователь переходит на страницу с диалогом
-    // Контроллер "InterlocutorController", метод "actionWriteMessage"
-    'interlocutor/writeMessage/([0-9]+)' => 'interlocutor/writeMessage/$1', 
+
     
     
     '' => 'user/main', 

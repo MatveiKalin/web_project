@@ -7,6 +7,11 @@ body {
     min-width: 800px;
 }
 
+.info {
+    color: #03C03C;
+    font-weight: bold;
+}
+
 h1 {
     /*outline: 1px solid red;*/
     font-size: 1.55em;
@@ -17,7 +22,6 @@ h1 {
     text-align: center;
     font-size: 1.1em;
 }
-
 
 #wrapper {
     /*outline: 1px solid red;*/
@@ -70,8 +74,6 @@ h1 {
     font-size: 0.8em;
 }
 
-
-
 #left_menu ul {
     /*outline: 1px dashed red;*/
     list-style: none;
@@ -100,9 +102,6 @@ h1 {
 #left_menu ul a:hover {
     background: #FC4E3A;
 }
-
-
-
 
 #container_forms {
     /*outline: 1px solid red;*/
@@ -147,14 +146,11 @@ h1 {
     color: #FFF;
 }
 
-
 .conatiner_switch {
     /*outline: 1px solid red;*/
     width: 357px;
     margin: -20px 0 20px -54px; 
 }
-
-
 
 #switch_input, #switch_registration {
     /*border: 1px solid grey;*/
@@ -227,7 +223,6 @@ h1 {
     color: #FFF;
 }
 
-
 button, .btn, .btn_save, .btn_change, .btn_remove {
     border-radius: 4px;
     -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08);
@@ -267,13 +262,11 @@ button, .btn {
     border: 1px solid rgb(33, 126, 74);
 }
 
-
 .btn:hover, button:hover {
     background-color: rgb(78, 129, 201);
     cursor: pointer;
     color: #fff;
 }
-
 
 .btn_save:hover {	
     background-color: #0BDA51;
@@ -310,6 +303,10 @@ button, .btn {
     float: left;
 }
 
+.main_photo {
+    border-radius: 20px;
+}
+
 .conatiner_user_min_info {
     outline: 1px solid green;
     margin: 0 205px 0 100px;
@@ -326,7 +323,6 @@ button, .btn {
     float: right;
     width: 200px;
 }
-
 
 .test {
     outline: 1px solid red;
@@ -356,13 +352,8 @@ button, .btn {
 .conteiner_user img {
     float: left;
     margin-right: 10px;
+    border-radius: 20px;
 }
-
-/*.conteiner_btn {
-    float: right;
-    width: 250px;
-    outline: 1px dashed red;
-}*/
 
 .conteiner_btn {
     /*outline: 1px solid yellow;*/
@@ -420,7 +411,7 @@ button, .btn {
 }
 
 .textarea_text {
-    width: 80%;
+    width: 100%;
     height: 120px;
 }
 
@@ -428,22 +419,56 @@ button, .btn {
     clear: both;
 }
 
-
 .block_mesaage {
-    width: 45%;
+    display: block;
+    width: 75%;
     margin-bottom: 10px;
     min-height: 70px;
     border-radius: 5px;
 }
 
+.block_mesaage img {
+    border-radius: 0 20px 20px 0;
+    float: left;
+}
+
 .my_message {
     float: left;
     border: 1px solid red;
-    background-color: pink;
+    background-color: #FFBCD9;
 }
 
 .interlocutor_message {
     float: right;
     border: 1px solid blue;
-    background-color: #3C8DB8;
+    background-color: #98FF98;
+}
+
+.interlocutor_common_message{
+    float: right;
+    border: 1px solid blue;
+    background-color: #AFDAFC;
+}
+
+.space_bottom {
+    height: 100px;
+}
+
+.name_user {
+    /*outline: 1px solid red;*/
+    margin: -10px 52% 0 80px; 
+    font-weight: bold;
+}
+
+.date_send {
+    /*outline: 1px solid red;*/
+    float: right;
+    width: auto;
+    color: #737373;
+    font-size: 0.8em;
+    margin: 12px;
+}
+
+.body_message {
+    padding: 10px;
 }

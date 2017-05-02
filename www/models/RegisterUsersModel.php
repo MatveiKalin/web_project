@@ -50,7 +50,9 @@ class RegisterUsersModel {
         
         if (!$result->fetch()) {
             $query_add_interlocutor = 'INSERT INTO interlocutor (id_user, id_interlocutor) '
-                . 'VALUES (:id_user, :id_interlocutor)';
+                . 'VALUES '
+                    . '(:id_user, :id_interlocutor), '
+                    . '(:id_interlocutor, :id_user)';
         
             $result_add_interlocutor = $db->prepare($query_add_interlocutor);
             $result_add_interlocutor->bindParam(':id_user', $_SESSION['user_id']);

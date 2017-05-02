@@ -2,22 +2,10 @@
 
     // Функция teleportation($name_page) переадресует на страницу, имя которой написано в параметр функции
     function teleportation($name_page) {
-            // Присваиваем в переменную адрес главной страницы
-            $page = 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/' . $name_page;
-
-            // Если в адресе страницы появиться символ "\", то в браузере Mozilla Firefox
-            // не будет загружаться данная страница, поэтому находим этот символ "\" и
-            // удаляем его
-            $page = str_replace('\\', '', $page);
-
-            // Заголовок, который переадресует браузер на главную страницу
-            // с сообщением о том, что имя и пароль введены не верно
-            header('Location: ' . $page);
-
-            // JavaScript - код, который преадресует на ту страницу, имя которой написано в параметр функции (Он сработает, если "header" не сможет переадресовать)
-            echo '<script language="JavaScript">';
-                    echo 'window.location.href = "' . $name_page . '"';
-            echo '</script>';
+        // JavaScript - код, который преадресует на ту страницу, имя которой написано в параметр функции (Он сработает, если "header" не сможет переадресовать)
+        echo '<script language="JavaScript">';
+                echo 'window.location.href = "' . $name_page . '"';
+        echo '</script>';
     } // Конец функции "teleportation($name_page)"
     
     
@@ -28,10 +16,10 @@
 
         // Фото
         if (is_file($registerUserMas['url_avatar']) && filesize($registerUserMas['url_avatar']) > 0) {
-            echo '<img src="../../' . $registerUserMas['url_avatar'] . '" width="150" height="150" alt="Фотография пользователя" /><br /><br />';
+            echo '<img src="../../' . $registerUserMas['url_avatar'] . '" width="150" height="150" alt="Фотография пользователя" class="main_photo" /><br /><br />';
         }
         else {
-            echo '<img src="/template/img/defaultUserAvatar.png" width="150" height="150" alt="Фотография пользователя" /><br /><br />';
+            echo '<img src="/template/img/defaultUserAvatar.png" width="150" height="150" alt="Фотография пользователя" class="main_photo" /><br /><br />';
         }
 
         // Дата рождения
@@ -81,6 +69,25 @@
         else {
             echo 'Отсутствует информация<br /><br />';
         }
+    }
+    
+    
+    // Функция, которая изменяет формат даты без времени на формат, 
+    // который используется в России
+    function transformData($data) {
+        if ($data != '0000-00-00') {
+            return date_format(date_create($data), 'd-m-Y');
+        }
+        else {
+            return '00-00-0000';
+        }
+    } 
+    
+    
+    // Функция, которая изменяет формат даты с временем на формат, 
+    // который используется в России
+    function transformDataWithTime($datetime) {
+        return date_format(date_create($datetime), 'd-m-Y H:i:s');
     } 
 
 ?>

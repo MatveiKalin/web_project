@@ -1,10 +1,6 @@
 <?php
     require_once(ROOT . '/views/layouts/header.php');
     require_once(ROOT . '/views/layouts/left_menu.php'); 
-    
-//    echo '<pre>';
-//    print_r($interlocutorMas);
-//    echo '</pre>';
 ?>
 
     <div id="main">
@@ -22,7 +18,7 @@
                     }
                 ?>
                 <div class="conteiner_btn">
-                    <a href="/interlocutor/writeMessage/<?php echo $interlocutor['id']; ?>">Написать письмо</a>
+                    <a href="/user/writeMessageInDialog/<?php echo $interlocutor['id']; ?>">Написать письмо</a>
                     <a href="/registerUsers/showRegisterUser/<?php echo $interlocutor['id']; ?>">Просмотреть личные данные</a>
                 </div>
 

@@ -53,6 +53,26 @@ class UserModel {
     }
     
     
+    // Получение сведений о пользователе
+    public static function getOneUser($id) {
+        $db = Db::getConnection();
+        $idInterlocutorMasAssoc = array();
+        
+        $sql = 'SELECT * FROM user '
+                . 'WHERE id = :id';
+        
+        $result = $db->prepare($sql);
+        $result->bindParam(':id', $id);       
+        $result->execute();
+        $result->setFetchMode(PDO::FETCH_NAMED);
+
+        // Закрытие соединения с БД
+        $db = null;
+        
+        return $row = $result->fetch(); 
+    }
+    
+    
     public static function logout() {          
         // Если пользователь вошел в приложение и нажал на ссылку
         // "Выйти из приложения", то ...
@@ -64,9 +84,6 @@ class UserModel {
 
             // Удаление сессии
             session_destroy();
-
-            // Переходим на форму входа/регистрации
-            teleportation('');
         }
     }
     

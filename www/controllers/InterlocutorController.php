@@ -3,13 +3,17 @@
 // Подключаем модель
 require_once(ROOT . '/models/InterlocutorModel.php');
 require_once(ROOT . '/components/SharedFunction.php');
+require_once(ROOT . '/components/sanitize.php');
 
 class InterlocutorController {
    
     // Метод вызывается, когда пользователь просматривает список своих собеседников
-    public function actionList($id) {    
+    public function actionList($id) { 
+        
+        $id = sanitizeMySQL($id);
+        
         if ($_SESSION['user_id'] == $id) {
-
+            
             // Обращаемся к модели
             $interlocutorMas = InterlocutorModel::getListInterlocutors($id); 
             
@@ -18,18 +22,10 @@ class InterlocutorController {
         }
         else {
             // Переходим на форму входа/регистрации
-            teleportation('');
+            teleportation('/');
         }
         
         return true;
     }
-    
-    
-    // Метод вызывается, когда пользователь переходит на страницу с диалогом 
-    // пользователя, идентификатор которого $id
-    public function actionWriteMessage($id) {    
-        
-        // Вызываем вид
-        require_once(ROOT . '/views/interlocutors/dialog.php');    
-    }
+
 }
