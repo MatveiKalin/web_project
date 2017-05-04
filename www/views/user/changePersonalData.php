@@ -7,7 +7,7 @@
         <h1>Изменение личных данных</h1>
         
         <?php
-            echo '<a href="' . $_SERVER['HTTP_REFERER'] . '" class="back"><< Назад</a><br /><br />';
+            echo '<a href="/user/' . $_SESSION['user_id'] . '" class="back"><< Назад</a><br /><br />';
         ?>
         
         <!--Показ ошибок-->

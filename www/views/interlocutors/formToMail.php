@@ -1,24 +1,23 @@
 <?php
     require_once(ROOT . '/views/layouts/header.php');
     require_once(ROOT . '/views/layouts/left_menu.php'); 
-    
-//    echo '<pre>';
-//    print_r($infoAboutMeMas);
-//    echo '</pre>';
-    
 ?>
     <div id="main">
         <h1>Отправить сообщение на электронную почту</h1>
         
+        <p class="info">На локальном веб-сервере работать не будет отправка на электронную почту, 
+            заработает в том случае, когда этот сайт разместится на сервере поставщика по услугам хостинга, 
+            где разрешено отправлять подобные сообщения на почту.</p>
+        
         <form action="/user/sendMessageToMail" method="post">
-            <label>Почтовый адрес отправителя:</label><br />
-            <input type="text" name="sender_mail" value="<?php echo $infoAboutMeMas['e_mail']; ?>" /><br /><br />
+            <label for="sender_mail">Почтовый адрес отправителя:</label><br />
+            <input type="text" name="sender_mail" id="sender_mail" value="<?php echo $infoAboutMeMas['e_mail']; ?>" /><br /><br />
             
-            <label>Почтовый адрес получателя:</label><br />
-            <input type="text" name="e_mail" value="" /><br /><br />
+            <label for="e_mail">Почтовый адрес получателя:</label><br />
+            <input type="text" name="e_mail" id="e_mail" value="" /><br /><br />
             
-            <label>Заголовок письма:</label><br />
-            <input type="text" name="subject" value="" /><br /><br />
+            <label for="subject">Заголовок письма:</label><br />
+            <input type="text" name="subject" id="subject" value="" /><br /><br />
             
             <textarea name="text_message" class="textarea_text"></textarea><br />
             

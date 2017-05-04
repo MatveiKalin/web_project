@@ -75,12 +75,7 @@
     // Функция, которая изменяет формат даты без времени на формат, 
     // который используется в России
     function transformData($data) {
-        if ($data != '0000-00-00') {
-            return date_format(date_create($data), 'd-m-Y');
-        }
-        else {
-            return '00-00-0000';
-        }
+        return date_format(date_create($data), 'd-m-Y');
     } 
     
     

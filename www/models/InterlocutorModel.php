@@ -171,5 +171,8 @@ class InterlocutorModel {
         
         // ОТПРАВКА СООБЩЕНИЯ
         mail($email, $subject, $message, $headers);
+        
+        // Закрытие соединения с БД
+        $db = null;
     }
 }
