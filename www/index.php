@@ -1,21 +1,15 @@
-<?php
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Синтаксический разбор</title>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <ol>
+        <li><a href="pages/dom.php">Синтаксический разбор с помощью DOM</a></li>
+        <li><a href="pages/regex.php">Синтаксический разбор с регулярных выражений</a></li>
+    </ol>
+</body>	
+</html>
 
-// Передовой контроллер
-
-
-// 1). Общие настройки
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
-
-
-// 2). Подключение файлов системы
-define('ROOT', dirname(__FILE__));
-require_once(ROOT . '\components\Router.php');
-
-
-session_start();
-
-
-// 3). Вызов Router
-$router = new Router();
-$router->run();
